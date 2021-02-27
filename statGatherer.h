@@ -54,7 +54,7 @@ class countyGather : public statGatherer {
     void gatherPerStats(Visitor* theCounties, vector<double> &XPer, vector<double> &YPer, 
             double (demogData::*f1)() const, double (comboHospitalData::*f2)() const) {
         //for all demographic data
-        //YPer.push_back(0);
+        YPer.push_back(0);
         for (auto entry : ((visitorCombineCounty *)theCounties)->countyDmap()) {
             //make sure there is valid hospital data!
             comboHospitalData* hospForCounty= ((visitorCombineCounty *)theCounties)->countyHmapEntry(entry.first);
