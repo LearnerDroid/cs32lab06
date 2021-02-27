@@ -46,11 +46,11 @@ int main() {
   fillCounties.gatherPerStats(&theCounties, dataX, dataY, &demogData::getBelowPoverty, &comboHospitalData::getOverallRate);
 
   double mX = stats::computeMean(dataX); 
-  double mY = stats::computeMean(dataY);  
+  double mY = stats::computeMean(dataY);
   double cc = stats::computeCorCoeffSample(dataX, dataY);
 
   ASSERT_EQUALS(16.489, mX);
-  ASSERT_EQUALS(2.5392, mY); //overall rating is too high: excel says 2.18
+  ASSERT_EQUALS(2.5392, mY); //overall rating is too high: ours 2.5402
   ASSERT_EQUALS(-0.0948, cc);
 
   return 0;

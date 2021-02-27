@@ -40,6 +40,7 @@ class rating {
     rating& operator*(const double Sc) { inR *= Sc; return *this; }
     rating& operator/=(const double Sc) { inR /= Sc; return *this; }
     rating& operator/(const int Sc) { inR /= Sc; return *this; }
+    rating& operator+(const rating r) { inR += r.inR; return *this; }
     rating& operator+=(const rating r) { inR += r.inR; return *this; }
     rating& operator+(const double Sc) { inR += Sc; return *this; }
     rating& operator+=(const double Sc) { inR += Sc; return *this; }

@@ -13,8 +13,8 @@ void comboHospitalData::addHospitaltoRegion(shared_ptr<hospitalData> HI) {
 	if (HI->getOverallRate() < 0)
 		return;
 	setOverallRate(getOverallRate() * numHosp + HI->getOverallRate());
-	setMortality(getMortality() * numHosp + HI->getOverallRate());
-	setReadmit(getReadmit() * numHosp + HI->getOverallRate());
+	setMortality(getMortality() * numHosp + HI->getMortality());
+	setReadmit(getReadmit() * numHosp + HI->getReadmit());
 
 	numHosp++;
 	setOverallRate(getOverallRate() / numHosp);
