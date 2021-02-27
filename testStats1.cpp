@@ -16,11 +16,16 @@ int main() {
   double stdDevX = stats::computeStdDevSample(x);  
   double meanY =  stats::computeMean(y); 
   double stdDevY = stats::computeStdDevSample(y); 
-  
+  /*
   ASSERT_EQUALS(41.167, meanX);
   ASSERT_EQUALS(15.753, stdDevX);
   ASSERT_EQUALS(81.0, meanY);
   ASSERT_EQUALS(11.454, stdDevY);
+  */
+  ASSERT_EQUALS(meanX, 41.167);
+  ASSERT_EQUALS(stdDevX, 15.753);
+  ASSERT_EQUALS(meanY, 81.0);
+  ASSERT_EQUALS(stdDevY, 11.454);
 
   return 0;
 }
